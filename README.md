@@ -99,14 +99,14 @@ Kafka connect ONLY set up IN NODE KAFKA1
 
 in file path /home/kafka
 
-    mkdir connect && cd /home/kafka/connect
+    mkdir connect && cd connect
 
 in file path /home/kafka/connect 
 
     wget https://repo1.maven.org/maven2/io/debezium/debezium-connector-postgres/1.9.6.Final/debezium-connector-postgres-1.9.6.Final-plugin.tar.gz && tar -xvf debezium-connector-postgres-1.9.6.Final-plugin.tar.gz
     wget https://github.com/neo4j-contrib/neo4j-streams/releases/download/4.1.2/neo4j-kafka-connect-neo4j-2.0.2-kc-oss.zip 
-    unzip neo4j-kafka-connect-neo4j-2.0.2-kc-oss.zip
     sudo apt install unzip (if not install unzip)
+    unzip neo4j-kafka-connect-neo4j-2.0.2-kc-oss.zip
 
 ### Copy connect.properties to kafka-connect-properties in file path /home/kafka/config
 
@@ -132,7 +132,7 @@ Append this:
     [Service]
     Type=simple
     User=devarli
-    ExecStart=/bin/sh -c '/home/kafka1/kafka/bin/connect-distributed.sh /home/kafka1/kafka/config/kafka-connect.properties > /home/kafka1/kafka/logs-1/kafka_connect.log 2>&1'
+    ExecStart=/bin/sh -c '/home/kafka1/kafka/bin/connect-distributed.sh /home/kafka1/kafka/config/kafka-connect.properties > /home/kafka1/kafka/logs1/kafka_connect.log 2>&1'
     Restart=on-abnormal
     
     [Install]
@@ -140,11 +140,14 @@ Append this:
 
 ### After edited the systemd config running the kafka_connect in /home/kafka/bin
 
-    systemctl start kafka_connect.services
+    systemctl start kafka_connect.service
+    systemctl status kafka_connect.service
+
+![image](https://github.com/arliputraa/kafka-cluster-configuration/assets/110078907/7a59bc67-217e-4464-a570-e8c44757fbcf)
 
 ### For more learning Apache Kafka in this link: https://github.com/arliputraa/apache-kafka-instalation
 
-### Optional add monitoring Kafdrop for gui kafka:
+### Optional add monitoring Kafdrop for gui kafka in this link: https://github.com/arliputraa/kafdrop-configuration-for-gui-kafka 
 
 ![image](https://github.com/arliputraa/kafka-cluster-configuraation/assets/110078907/3e094f36-9bc3-416e-af4b-d623868c604f)
 
