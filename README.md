@@ -108,7 +108,7 @@ in file path /home/kafka/connect
     unzip neo4j-kafka-connect-neo4j-2.0.2-kc-oss.zip
     sudo apt install unzip (if not install unzip)
 
-Copy connect.properties to kafka-connect-properties in file path /home/kafka/config
+### Copy connect.properties to kafka-connect-properties in file path /home/kafka/config
 
     cp connect.properties kafka-connect-properties
     nano kafka-connect-properties
@@ -138,13 +138,13 @@ Append this:
     [Install]
     WantedBy=multi-user.target
 
-After edited the systemd config running the kafka_connect in /home/kafka/bin
+### After edited the systemd config running the kafka_connect in /home/kafka/bin
 
     systemctl start kafka_connect.services
 
-## For more learning Apache Kafka in this link: https://github.com/arliputraa/apache-kafka-instalation
+### For more learning Apache Kafka in this link: https://github.com/arliputraa/apache-kafka-instalation
 
-## Add optional monitoring Kafdrop for gui kafka:
+### Optional add monitoring Kafdrop for gui kafka:
 
 ![image](https://github.com/arliputraa/kafka-cluster-configuraation/assets/110078907/3e094f36-9bc3-416e-af4b-d623868c604f)
 
