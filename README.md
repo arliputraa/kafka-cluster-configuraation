@@ -8,9 +8,9 @@
     
 ### Copy server.preperties in file path /home/kafka/config 
     
-    cp config/server.properties config/server1.properties
-    cp config/server.properties config/server2.properties 
-    cp config/server.properties config/server3.properties 
+    cp server.properties server1.properties
+    cp server.properties server2.properties 
+    cp server.properties server3.properties 
 
 After copy the server properties append this conf:
 
