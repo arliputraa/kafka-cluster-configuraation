@@ -1,4 +1,4 @@
-# Setup Kafka Cluster 3 instance and 1 zookeeper
+# Setup Kafka Cluster 3 instance and 1 instance Zookeeper
 
 ### Create the log directories in file path /home/kafka
 
